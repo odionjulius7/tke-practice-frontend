@@ -64,8 +64,8 @@ const Home = (props: Props) => {
       new Date(b?.overview.startDate).getTime() -
       new Date(a?.overview.startDate).getTime()
   );
+  // console.log(singleUser);
 
-  // console.log(sortedTrip);
   return (
     <Container sx={{ color: "white" }}>
       <Stack sx={{ margin: "0 6rem" }}>
@@ -98,7 +98,7 @@ const Home = (props: Props) => {
             marginBottom: "4rem",
           }}
         >
-          <Banner />
+          <Banner banner={singleUser?.banner?.imgURL} />
         </Stack>
         <Stack
           sx={{

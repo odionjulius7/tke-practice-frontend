@@ -8,7 +8,11 @@ import BoltIcon from "@mui/icons-material/Bolt";
 
 import PlaceBanner from "../Images/placesBanner.png";
 
-export default function Banner() {
+type Props = {
+  banner: any;
+};
+
+export default function Banner({ banner }: Props) {
   return (
     <Box>
       <AppBar
@@ -67,11 +71,11 @@ export default function Banner() {
             </Stack>
           </Stack>
         </Toolbar> */}
-        <Stack>
+        <Stack sx={{ height: "120px" }}>
           <CardMedia
-            sx={{ width: "100%", height: "100%" }}
+            sx={{ width: "100%", maxHeight: "100%" }}
             component="img"
-            image={PlaceBanner}
+            image={banner ? banner : PlaceBanner}
             alt="Paella dish"
           />
         </Stack>

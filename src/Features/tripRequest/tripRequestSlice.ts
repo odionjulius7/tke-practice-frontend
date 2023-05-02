@@ -19,17 +19,16 @@ const initialState: TripRequestState = {
 
 export const createTripRequest = createAsyncThunk(
   "tripRequests/createTripRequest",
-  async (ids: { tripRequest: TripRequest; token: any }, thunkAPI) => {
+  async (ids: { tripRequest: TripRequest; token?: any }, thunkAPI) => {
     try {
+      const headers = {
+        "Content-Type": "application/json",
+        ...(ids.token && { Authorization: `Bearer ${ids.token}` }),
+      };
       const response = await axios.post(
         `${process.env.REACT_APP_API_ENDPOINT}/trip/request`,
         ids.tripRequest,
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${ids.token}`,
-          },
-        }
+        { headers }
       );
       toast.success("Trip request created successfully!");
       return response.data;

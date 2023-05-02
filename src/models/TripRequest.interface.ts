@@ -58,4 +58,5 @@ export interface Trips {
   payment: any;
   travelConfirmation: any;
   overview: any;
+  itinerary: any;
 }
