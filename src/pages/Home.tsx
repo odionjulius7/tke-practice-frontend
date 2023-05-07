@@ -68,10 +68,22 @@ const Home = (props: Props) => {
 
   return (
     <Container sx={{ color: "white" }}>
-      <Stack sx={{ margin: "0 6rem" }}>
+      <Stack
+        sx={{
+          margin: {
+            xs: "0 0rem",
+            sm: "0 2rem",
+            md: "0 6rem",
+          },
+        }}
+      >
         <Stack
           direction="row"
-          spacing={4}
+          spacing={{
+            xs: 2,
+            sm: 3,
+            md: 4,
+          }}
           sx={{
             justifyContent: "space-between",
             marginBottom: "2rem",
@@ -106,7 +118,17 @@ const Home = (props: Props) => {
             marginBottom: "2rem",
           }}
         >
-          <Typography variant="h5" sx={{ fontSize: "24px", fontWeight: 700 }}>
+          <Typography
+            variant="h5"
+            sx={{
+              fontSize: {
+                xs: "18px",
+                sm: "22px",
+                md: "24px",
+              },
+              fontWeight: 700,
+            }}
+          >
             Trips
           </Typography>
         </Stack>
@@ -115,15 +137,27 @@ const Home = (props: Props) => {
             return (
               <Stack
                 direction="row"
-                spacing={9}
+                spacing={{
+                  xs: 4,
+                  sm: 9,
+                  md: 9,
+                }}
                 sx={{ width: "100%", margin: "1rem 0", alignItems: "center" }}
               >
                 <Stack sx={{ width: "10%" }}>
                   <Typography
                     sx={{
                       bgcolor: "#A78A48",
-                      width: "29px",
-                      height: "29px",
+                      width: {
+                        xs: "25px",
+                        sm: "29px",
+                        md: "29px",
+                      },
+                      height: {
+                        xs: "25px",
+                        sm: "29px",
+                        md: "29px",
+                      },
                       borderRadius: "200px",
                       position: "relative",
                     }}
@@ -133,18 +167,34 @@ const Home = (props: Props) => {
                         orientation="vertical"
                         sx={{
                           backgroundColor: "#A78A48",
-                          height: "80px",
+                          height: {
+                            xs: "60px",
+                            sm: "75px",
+                            md: "80px",
+                          },
                           transform: "skewed(90deg)",
                           width: "3px",
                           marginLeft: "45%",
-                          marginTop: "2.2rem",
+                          marginTop: {
+                            xs: "1.9rem",
+                            sm: "2.2rem",
+                            md: "2.2rem",
+                          },
                           // marginbottom: "-1rem",
                         }}
                       />
                     )}
                   </Typography>
                 </Stack>
-                <Stack sx={{ width: "90%" }}>
+                <Stack
+                  sx={{
+                    width: {
+                      xs: "90%",
+                      sm: "90%",
+                      md: "90%",
+                    },
+                  }}
+                >
                   <TripBox length={length} index={index} item={item} />
                 </Stack>
               </Stack>

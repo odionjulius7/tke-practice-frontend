@@ -74,15 +74,59 @@ export default function ButtonAppBar() {
               direction="column"
               sx={{ justifyContent: "center", alignItems: "center" }}
             >
-              <Typography>Upcoming</Typography>
-              <Typography variant="h5">{upcomingTrips.length}</Typography>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "13px",
+                    sm: "15px",
+                    md: "16px",
+                  },
+                  fontWeight: 600,
+                }}
+              >
+                Upcoming
+              </Typography>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: {
+                    xs: "15px",
+                    sm: "18px",
+                    md: "20px",
+                  },
+                }}
+              >
+                {upcomingTrips.length}
+              </Typography>
             </Stack>
             <Stack
               direction="column"
               sx={{ justifyContent: "center", alignItems: "center" }}
             >
-              <Typography>Total Trips</Typography>
-              <Typography variant="h5">{usertrips.length}</Typography>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "13px",
+                    sm: "15px",
+                    md: "16px",
+                  },
+                  fontWeight: 600,
+                }}
+              >
+                Total Trips
+              </Typography>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontSize: {
+                    xs: "15px",
+                    sm: "18px",
+                    md: "20px",
+                  },
+                }}
+              >
+                {usertrips.length}
+              </Typography>
             </Stack>
             <Stack
               direction="column"
@@ -93,15 +137,66 @@ export default function ButtonAppBar() {
             >
               <Stack direction="row">
                 <BoltIcon />
-                <Typography>Essential Member</Typography>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "14px",
+                      sm: "16px",
+                      md: "18px",
+                    },
+                    fontWeight: 600,
+                  }}
+                >
+                  Essential Member
+                </Typography>
               </Stack>
               <Stack direction="row" spacing={2}>
-                <Typography>1</Typography>
-                <Typography>One Night Rest</Typography>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "13px",
+                      sm: "16px",
+                      md: "18px",
+                    },
+                  }}
+                >
+                  1
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "13px",
+                      sm: "16px",
+                      md: "18px",
+                    },
+                  }}
+                >
+                  One Night Rest
+                </Typography>
               </Stack>
               <Stack direction="row" spacing={2}>
-                <Typography>2</Typography>
-                <Typography>One Night Rest</Typography>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "13px",
+                      sm: "16px",
+                      md: "18px",
+                    },
+                  }}
+                >
+                  2
+                </Typography>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "13px",
+                      sm: "16px",
+                      md: "18px",
+                    },
+                  }}
+                >
+                  One Night Rest
+                </Typography>
               </Stack>
             </Stack>
           </Stack>

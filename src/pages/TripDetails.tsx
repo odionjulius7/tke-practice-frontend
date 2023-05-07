@@ -59,22 +59,54 @@ const TripDetails = (props: Props) => {
     );
   return (
     <Container sx={{ color: "white", minHeight: "650px" }}>
-      <Stack sx={{ margin: "0 6rem" }}>
+      <Stack
+        sx={{
+          margin: {
+            xs: "0 0rem",
+            sm: "0 6rem",
+            md: "0 6rem",
+          },
+        }}
+      >
         <TabContext value={value}>
           {" "}
           <Stack
-            direction="row"
+            direction={{
+              xs: "row",
+              sm: "row",
+              md: "row",
+            }}
             spacing={4}
             sx={{ justifyContent: "space-between", marginBottom: "3rem" }}
           >
             <UserHeader />
           </Stack>
-          <Stack direction="row" spacing={10}>
+          <Stack
+            direction={{
+              xs: "column",
+              sm: "row",
+              md: "row",
+            }}
+            spacing={{
+              xs: 2,
+              sm: 8,
+              md: 8,
+            }}
+          >
             <Stack
+              // direction="column"
               sx={{
                 bgcolor: "white",
-                width: "28%",
-                height: "400px",
+                width: {
+                  xs: "100%",
+                  sm: "28%",
+                  md: "28%",
+                },
+                height: {
+                  xs: "300px",
+                  sm: "400px",
+                  md: "400px",
+                },
                 color: "black",
                 borderRadius: "7px",
               }}
@@ -85,20 +117,37 @@ const TripDetails = (props: Props) => {
                 orientation="vertical"
                 sx={{
                   padding: "1.2rem",
+                  justifyContent: "space-between",
                   "& .css-1ivz7ma-MuiButtonBase-root-MuiTab-root.Mui-selected":
                     {
                       bgcolor: "#A78A4833",
                       borderRadius: "5px",
                       color: "#A78A48",
-                      width: "100%",
+                      width: {
+                        xs: "50%",
+                        sm: "100%",
+                        md: "100%",
+                      },
                       alignItems: "flex-start",
                     },
                   "& .css-10d9dml-MuiTabs-indicator": {
-                    bgcolor: "#A78A4833",
+                    bgcolor: {
+                      xs: "transparent",
+                      sm: "#A78A4833",
+                      md: "#A78A4833",
+                    },
                   },
                   "& .css-lfwcke-MuiTabs-flexContainer": {
                     alignItems: "flex-start",
                     // padding: "0.5rem 1rem",
+                    display: "flex",
+                    flexDirection: {
+                      xs: "row",
+                      sm: "column",
+                      md: "column",
+                    },
+                    flexWrap: "wrap",
+                    gap: "1rem",
                   },
                 }}
               >
@@ -114,7 +163,11 @@ const TripDetails = (props: Props) => {
             <Stack
               sx={{
                 bgcolor: "white",
-                width: "72%",
+                width: {
+                  xs: "100%",
+                  sm: "72%",
+                  md: "72%",
+                },
                 minHeight: "400px",
                 color: "black",
                 borderRadius: "7px",

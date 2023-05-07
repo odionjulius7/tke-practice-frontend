@@ -10,9 +10,17 @@ const Footer = (props: Props) => {
       <Stack
         sx={{
           textAlign: "center",
-          fontSize: "14px",
+          fontSize: {
+            xs: "12px",
+            sm: "13px",
+            md: "14px",
+          },
           fontWeight: 400,
-          margin: "0.2rem 0 1.3rem 0",
+          margin: {
+            xs: "0.1rem 0 0.8rem 0",
+            sm: "0.2rem 0 1.3rem 0",
+            md: "0.2rem 0 1.3rem 0",
+          },
         }}
       >
         © 2022 All right reserved by The Keona Experience

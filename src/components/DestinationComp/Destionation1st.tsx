@@ -10,7 +10,15 @@ type Props = {
 
 const Destionation1st = ({ handleChange }: Props) => {
   return (
-    <Stack sx={{ margin: "0 2rem" }}>
+    <Stack
+      sx={{
+        margin: {
+          xs: "0 1rem",
+          sm: "0 2rem",
+          md: "0 2rem",
+        },
+      }}
+    >
       <Helmet text="DESTINATION CELEBRATION QUESTIONNAIRE" />
       <HeaderText />
       <ProgressBar value={33.3333 * 2} />

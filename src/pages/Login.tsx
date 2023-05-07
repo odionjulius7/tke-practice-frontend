@@ -83,11 +83,23 @@ const Login = (props: Props) => {
     <CompWrapper>
       <Stack
         sx={{
-          width: "50%",
-          minHeight: "400px",
+          width: {
+            xs: "80%",
+            sm: "50%",
+            md: "50%",
+          },
+          minHeight: {
+            xs: "300px",
+            sm: "400px",
+            md: "400px",
+          },
           backgroundColor: "#ffffff",
           margin: "0rem auto",
-          marginTop: "9rem",
+          marginTop: {
+            xs: "7rem",
+            sm: "8rem",
+            md: "9rem",
+          },
         }}
       >
         <Box
@@ -95,17 +107,46 @@ const Login = (props: Props) => {
           sx={{
             "& .MuiTextField-root": {
               m: 1,
-              width: "70%",
+              width: {
+                xs: "80%",
+                sm: "70%",
+                md: "70%",
+              },
             },
-            margin: "2rem",
+            margin: {
+              xs: "1rem",
+              sm: "2rem",
+              md: "2rem",
+            },
             textAlign: "center",
           }}
           noValidate
           autoComplete="off"
         >
           {" "}
-          <Stack sx={{ margin: "2rem 0", cursor: "pointer" }}>
-            <Typography variant="h4">Login</Typography>
+          <Stack
+            sx={{
+              margin: {
+                xs: "1rem 0",
+                sm: "2rem 0",
+                md: "2rem 0",
+              },
+              cursor: "pointer",
+            }}
+          >
+            <Typography
+              variant="h4"
+              sx={{
+                fontSize: {
+                  xs: "17px",
+                  sm: "18px",
+                  md: "20px",
+                },
+              }}
+              fontWeight={700}
+            >
+              Login
+            </Typography>
           </Stack>
           <div style={{ margin: "1rem 0" }}>
             <TextField
@@ -122,7 +163,17 @@ const Login = (props: Props) => {
             />
           </div>
           <Stack sx={{ marginBottom: "1rem", width: "60%" }}>
-            <Typography sx={{ cursor: "pointer", color: "#000000" }}>
+            <Typography
+              sx={{
+                cursor: "pointer",
+                color: "#000000",
+                fontSize: {
+                  xs: "12px",
+                  sm: "16px",
+                  md: "16px",
+                },
+              }}
+            >
               Forgot Password
             </Typography>
           </Stack>
@@ -130,7 +181,15 @@ const Login = (props: Props) => {
             variant="contained"
             onClick={handleLogin}
             disabled={email.length === 0 || password.length === 0}
-            sx={{ bgcolor: "#A78A48", width: "120px" }}
+            sx={{
+              bgcolor: "#A78A48",
+              width: "120px",
+              fontSize: {
+                xs: "14px",
+                sm: "16px",
+                md: "18px",
+              },
+            }}
           >
             Log in
           </Button>

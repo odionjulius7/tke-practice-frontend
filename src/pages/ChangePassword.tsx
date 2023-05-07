@@ -77,7 +77,15 @@ const ChangePassword = (props: Props) => {
 
   return (
     <Container sx={{ color: "white" }}>
-      <Stack sx={{ margin: "0 6rem" }}>
+      <Stack
+        sx={{
+          margin: {
+            xs: "0 0rem",
+            sm: "0 4rem",
+            md: "0 6rem",
+          },
+        }}
+      >
         <Stack
           direction="row"
           spacing={4}
@@ -100,8 +108,12 @@ const ChangePassword = (props: Props) => {
           <Stack
             sx={{
               bgcolor: "white",
-              width: "60%",
-              minHeight: "400px",
+              width: {
+                xs: "100%",
+                sm: "80%",
+                md: "60%",
+              },
+              minHeight: "450px",
               color: "black",
               borderRadius: "7px",
             }}
@@ -121,7 +133,19 @@ const ChangePassword = (props: Props) => {
             >
               {" "}
               <Stack sx={{ margin: "2rem 0" }}>
-                <Typography variant="h4">Change Password</Typography>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "18px",
+                      sm: "20px",
+                      md: "24px",
+                    },
+                    fontWeight: 500,
+                  }}
+                  variant="h4"
+                >
+                  Change Password
+                </Typography>
               </Stack>
               <div style={{ margin: "1rem 0" }}>
                 <TextField

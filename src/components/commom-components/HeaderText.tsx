@@ -7,9 +7,16 @@ const HeaderText = (props: Props) => {
   return (
     <Stack
       sx={{
-        fontSize: "14px",
+        fontSize: {
+          xs: "12px",
+          sm: "13px",
+          md: "14px",
+        },
         fontWeight: 600,
-        margin: "1rem 0rem",
+        margin: {
+          xs: "0.4rem 0rem",
+          md: "1rem 0rem",
+        },
         color: "#5F5F5F",
       }}
     >

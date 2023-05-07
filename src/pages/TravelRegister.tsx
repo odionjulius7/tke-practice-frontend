@@ -20,20 +20,36 @@ const TravelRegister = (props: Props) => {
         sx={{
           justifyContent: "center",
           alignItems: "center",
-          margin: "0 2rem",
+          margin: {
+            xs: "0 1rem",
+            sm: "0 2rem",
+            md: "0 2rem",
+          },
         }}
       >
         <LogoFile
           sx={{
-            margin: "2rem auto",
-            marginBottom: "3rem",
+            margin: {
+              xs: "0.9rem auto",
+              sm: "1.5rem auto",
+              md: "2rem auto",
+            },
+            marginBottom: {
+              xs: "3.2rem",
+              sm: "3rem",
+              md: "3rem",
+            },
           }}
         />
         <Box
           sx={{
-            width: "60%",
+            width: {
+              xs: "90%",
+              // sm: "60%",
+              md: "60%",
+            },
             backgroundColor: "#ffffff",
-            padding: "2.5rem 4rem",
+            padding: "2.5rem 3rem",
             borderRadius: "7px",
             minHeight: "400px",
             textAlign: "center",

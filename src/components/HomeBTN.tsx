@@ -31,6 +31,10 @@ export default function IconLabelButtons({
   };
   const handleClose = () => {
     setAnchorEl(null);
+    // navigate("/bespoke");
+  };
+  const handleClose02 = () => {
+    setAnchorEl(null);
     navigate("/bespoke");
   };
   const handleClose01 = () => {
@@ -38,7 +42,14 @@ export default function IconLabelButtons({
     navigate("/destination");
   };
   return (
-    <Stack direction="row" spacing={2}>
+    <Stack
+      direction="row"
+      spacing={{
+        xs: 1,
+        sm: 2,
+        md: 2,
+      }}
+    >
       <Button
         endIcon={
           <KeyboardArrowDownIcon
@@ -70,7 +81,7 @@ export default function IconLabelButtons({
           }}
           sx={{ marginTop: "1rem", marginLeft: "0rem" }}
         >
-          <MenuItem onClick={handleClose}>Bespoke Travel</MenuItem>
+          <MenuItem onClick={handleClose02}>Bespoke Travel</MenuItem>
           <MenuItem onClick={handleClose01}>Destination Travel</MenuItem>
         </Menu>
       </Button>

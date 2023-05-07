@@ -13,7 +13,15 @@ const Bespoke1st = ({ handleChange }: Props) => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <Stack sx={{ margin: "0 2rem" }}>
+    <Stack
+      sx={{
+        margin: {
+          xs: "0 0.5rem",
+          sm: "0 2rem",
+          md: "0 2rem",
+        },
+      }}
+    >
       <Helmet text="BESPOKE TRAVEL QUESTIONNAIRE" />
       <HeaderText />
       <ProgressBar value={33.3333 * 2} />

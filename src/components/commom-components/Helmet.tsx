@@ -9,7 +9,12 @@ const Helmet = ({ text }: Props) => {
   return (
     <Stack
       sx={{
-        fontSize: "23px",
+        fontSize: {
+          xs: "15px",
+          sm: "20px",
+          md: "23px",
+          lg: "23px",
+        },
         fontWeight: 700,
         color: "#2D2E61",
       }}

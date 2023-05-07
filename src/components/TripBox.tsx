@@ -64,62 +64,146 @@ export default function TripBox({ length, index, item }: Props) {
               justifyContent: "space-between",
               alignItems: "center",
               width: "100%",
-              padding: "0.9rem 0rem",
+              padding: {
+                xs: "0.4rem 0rem",
+                sm: "0.7rem 0rem",
+                md: "0.9rem 0rem",
+              },
             }}
             onClick={handleClickToTrip}
           >
             <Stack
               direction="row"
-              spacing={2}
+              spacing={1}
               sx={{ alignItems: "center", justifyContent: "center" }}
             >
               <CardMedia
-                sx={{ width: "60px", height: "60px", borderRadius: "200px" }}
+                sx={{
+                  width: {
+                    xs: "30px",
+                    sm: "60px",
+                    md: "60px",
+                  },
+                  height: {
+                    xs: "30px",
+                    sm: "60px",
+                    md: "60px",
+                  },
+                  borderRadius: "200px",
+                }}
                 component="img"
                 image={item.overview.image ? item.overview.image : Logo}
                 alt="Paella dish"
               />
-              <Typography>{item.overview.title}</Typography>
+              <Typography
+                sx={{
+                  fontSize: {
+                    xs: "11px",
+                    sm: "15px",
+                    md: "16px",
+                  },
+                  fontWeight: 600,
+                }}
+              >
+                {item.overview.title}
+              </Typography>
             </Stack>
             <Stack
               direction="row"
-              spacing={4}
+              spacing={{
+                xs: 1,
+                sm: 3,
+                md: 4,
+              }}
               sx={{ alignItems: "center", justifyContent: "center" }}
             >
-              {index < length - 1 && (
+              {isOld && (
                 <Typography
                   sx={{
                     bgcolor: "#A78A48",
                     color: "white",
-                    fontSize: "13px",
+
+                    fontSize: {
+                      xs: "10px",
+                      sm: "13px",
+                      md: "13px",
+                    },
                     fontWeight: 600,
-                    padding: "0.2rem 0.3rem",
+                    padding: {
+                      xs: "0.1rem 0.15rem",
+                      sm: "0.2rem 0.3rem",
+                      md: "0.2rem 0.3rem",
+                    },
                     borderRadius: "3px",
+                    display: {
+                      xs: "none",
+                      sm: "block",
+                    },
                   }}
                 >
                   Upcoming
                 </Typography>
               )}
               <Stack
-                direction="column"
+                direction={{
+                  xs: "column",
+                  sm: "column",
+                  md: "column",
+                }}
                 sx={{ alignItems: "center", justifyContent: "center" }}
               >
-                <Typography>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "11px",
+                      sm: "15px",
+                      md: "16px",
+                    },
+                  }}
+                >
                   {moment(item.overview.startDate).format("dddd").slice(0, 3)}
                 </Typography>
-                <Typography>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "11px",
+                      sm: "15px",
+                      md: "16px",
+                    },
+                  }}
+                >
                   {moment(item.overview.startDate).format("MMM Do YY")}
                 </Typography>
               </Stack>
               <ArrowRightAltIcon />
               <Stack
-                direction="column"
+                direction={{
+                  xs: "column",
+                  sm: "column",
+                  md: "column",
+                }}
                 sx={{ alignItems: "center", justifyContent: "center" }}
               >
-                <Typography>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "11px",
+                      sm: "15px",
+                      md: "16px",
+                    },
+                  }}
+                >
                   {moment(item.overview.endDate).format("dddd").slice(0, 3)}
                 </Typography>
-                <Typography>
+                <Typography
+                  sx={{
+                    fontSize: {
+                      xs: "11px",
+                      sm: "15px",
+                      md: "16px",
+                    },
+                  }}
+                >
                   {moment(item.overview.endDate).format("MMM Do YY")}
                 </Typography>
               </Stack>

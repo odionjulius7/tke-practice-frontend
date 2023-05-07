@@ -43,14 +43,22 @@ const TripVisa = (props: Props) => {
                   sx={{
                     justifyContent: "center",
                     alignItems: "center",
-                    fontSize: "16px",
+                    fontSize: {
+                      xs: "12px",
+                      sm: "15px",
+                      md: "16px",
+                    },
                     fontWeight: 400,
                   }}
                 >
                   <Typography
                     sx={{
-                      fontSize: "16px",
-                      fontWeight: 400,
+                      fontSize: {
+                        xs: "13px",
+                        sm: "15px",
+                        md: "16px",
+                      },
+                      fontWeight: 600,
                     }}
                   >
                     {item?.title}
@@ -73,13 +81,18 @@ const TripVisa = (props: Props) => {
                       alignItems: "center",
                       bgcolor: "#fff",
                       padding: "0.1rem 0.2rem",
+                      fontSize: {
+                        xs: "12px",
+                        sm: "14px",
+                        md: "14px",
+                      },
                     }}
                   >
                     <Link
                       style={{
                         textDecoration: "none",
                         color: "inherit",
-                        fontSize: "14px",
+                        fontSize: "inherit",
                         fontWeight: 400,
                       }}
                       to={`${

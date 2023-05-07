@@ -6,7 +6,24 @@ type Props = {
 };
 
 const CompWrapper = ({ children }: Props) => {
-  return <Container sx={{ minHeight: "660px" }}>{children}</Container>;
+  return (
+    <Container
+      sx={{
+        minHeight: {
+          xs: "680px",
+          sm: "660px",
+          md: "660px",
+        },
+        padding: {
+          xs: "1rem 1rem",
+          sm: "1rem 2rem",
+          md: "1rem 2rem",
+        },
+      }}
+    >
+      {children}
+    </Container>
+  );
 };
 
 export default CompWrapper;

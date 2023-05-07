@@ -18,12 +18,6 @@ const Destination2ndForm = ({
   handleSelectChangeArray,
   choiceActivityWhileTravelling,
 }: Props) => {
-  // anythingElseAboutCelebration: "",
-  // daysToSpendCelebrating: "",
-  // estimateGuestToCelebrateWith: "",
-  // howSoonDoYouWantToBook: "",
-  // setDateForCel: "",
-  // whatTKEServiceDoYouWant: "",
   return (
     <Box
       component="form"
@@ -35,9 +29,18 @@ const Destination2ndForm = ({
     >
       <Stack>
         <Stack sx={{ width: "100%", textAlign: "start" }}>
-          <label style={{ margin: "0.5rem 0 0rem 0.7rem" }}>
+          <Stack
+            sx={{
+              margin: "0.5rem 0 0rem 0.7rem",
+              fontSize: {
+                xs: "14px",
+                sm: "15px",
+                md: "16px",
+              },
+            }}
+          >
             How many days would you like to celebrate with your guests?
-          </label>
+          </Stack>
           <TextField
             id="outlined-error"
             name="daysToSpendCelebrating"
@@ -45,9 +48,18 @@ const Destination2ndForm = ({
           />
         </Stack>
         <Stack sx={{ width: "100%", textAlign: "start" }}>
-          <label style={{ margin: "0.5rem 0 0rem 0.7rem" }}>
+          <Stack
+            sx={{
+              margin: "0.5rem 0 0rem 0.7rem",
+              fontSize: {
+                xs: "14px",
+                sm: "15px",
+                md: "16px",
+              },
+            }}
+          >
             If you have any dates set, or even just a month & year?
-          </label>
+          </Stack>
           <TextField
             id="outlined-error"
             name="setDateForCel"
@@ -55,9 +67,18 @@ const Destination2ndForm = ({
           />
         </Stack>
         <Stack sx={{ width: "100%", textAlign: "start" }}>
-          <label style={{ margin: "0.5rem 0 0.3rem 0.7rem" }}>
+          <Stack
+            sx={{
+              margin: "0.5rem 0 0.3rem 0.7rem",
+              fontSize: {
+                xs: "14px",
+                sm: "15px",
+                md: "16px",
+              },
+            }}
+          >
             What TKE service (s) are you interested in?
-          </label>
+          </Stack>
           <Select
             multiple
             name="whatTKEServiceDoYouWant"
@@ -73,17 +94,35 @@ const Destination2ndForm = ({
           </Select>
         </Stack>
         <Stack sx={{ width: "100%", textAlign: "start" }}>
-          <label style={{ margin: "1.1rem 0 0rem 0.7rem" }}>
+          <Stack
+            sx={{
+              margin: "1.1rem 0 0rem 0.7rem",
+              fontSize: {
+                xs: "14px",
+                sm: "15px",
+                md: "16px",
+              },
+            }}
+          >
             What is your budget for the celebration
-          </label>
+          </Stack>
           <Stack>
             <TextField id="outlined-error" onChange={handleChange} />
           </Stack>
         </Stack>
         <Stack sx={{ width: "100%", textAlign: "start" }}>
-          <label style={{ margin: "0.8rem 0 0rem 0.7rem" }}>
+          <Stack
+            sx={{
+              margin: "0.8rem 0 0rem 0.7rem",
+              fontSize: {
+                xs: "14px",
+                sm: "15px",
+                md: "16px",
+              },
+            }}
+          >
             Is there anything else we need to know about your celebration?
-          </label>
+          </Stack>
           <TextField
             multiline
             rows={4}
@@ -94,9 +133,18 @@ const Destination2ndForm = ({
           />
         </Stack>
         <Stack sx={{ width: "100%", textAlign: "start" }}>
-          <label style={{ margin: "0.8rem 0 0.3rem 0.7rem" }}>
+          <Stack
+            sx={{
+              margin: "0.8rem 0 0.3rem 0.7rem",
+              fontSize: {
+                xs: "14px",
+                sm: "15px",
+                md: "16px",
+              },
+            }}
+          >
             How soon are you looking to book?
-          </label>
+          </Stack>
           <Select
             // error
             displayEmpty
@@ -108,8 +156,8 @@ const Destination2ndForm = ({
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            <MenuItem value="bespoke">Bespoke</MenuItem>
-            <MenuItem value="destination">Destination</MenuItem>
+            <MenuItem value="bespoke">now</MenuItem>
+            <MenuItem value="destination">next 30 dayx</MenuItem>
           </Select>
         </Stack>
       </Stack>

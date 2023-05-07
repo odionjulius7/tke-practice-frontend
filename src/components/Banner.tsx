@@ -21,59 +21,17 @@ export default function Banner({ banner }: Props) {
           borderRadius: "7px",
         }}
       >
-        {/* <Toolbar
+        <Stack
           sx={{
-            borderRadius: "7px",
+            height: {
+              xs: "80px",
+              sm: "120px",
+              md: "120px",
+            },
           }}
         >
-          <Stack
-            direction="row"
-            sx={{
-              justifyContent: "space-around",
-              alignItems: "center",
-              width: "100%",
-              padding: "0.9rem 0rem",
-            }}
-          >
-            <Stack
-              direction="column"
-              sx={{ justifyContent: "center", alignItems: "center" }}
-            >
-              <Typography>Upcoming</Typography>
-              <Typography>1</Typography>
-            </Stack>
-            <Stack
-              direction="column"
-              sx={{ justifyContent: "center", alignItems: "center" }}
-            >
-              <Typography>Total Trips</Typography>
-              <Typography>5</Typography>
-            </Stack>
-            <Stack
-              direction="column"
-              sx={{
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <Stack direction="row">
-                <BoltIcon />
-                <Typography>Essential Member</Typography>
-              </Stack>
-              <Stack direction="row" spacing={2}>
-                <Typography>1</Typography>
-                <Typography>One Night Rest</Typography>
-              </Stack>
-              <Stack direction="row" spacing={2}>
-                <Typography>2</Typography>
-                <Typography>One Night Rest</Typography>
-              </Stack>
-            </Stack>
-          </Stack>
-        </Toolbar> */}
-        <Stack sx={{ height: "120px" }}>
           <CardMedia
-            sx={{ width: "100%", maxHeight: "100%" }}
+            sx={{ width: "100%", height: "100%" }}
             component="img"
             image={banner ? banner : PlaceBanner}
             alt="Paella dish"

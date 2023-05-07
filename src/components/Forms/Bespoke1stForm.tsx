@@ -15,6 +15,15 @@ type Props = {
   handleChange: any;
 };
 
+const styledLabel = {
+  margin: "0.5rem 0 0rem 0.7rem",
+  fontSize: {
+    xs: "14px",
+    sm: "15px",
+    md: "16px",
+  },
+};
+
 const Bespoke1stForm = ({ handleChange }: Props) => {
   return (
     <Box
@@ -27,9 +36,7 @@ const Bespoke1stForm = ({ handleChange }: Props) => {
     >
       <Stack>
         <Stack sx={{ width: "100%", textAlign: "start" }}>
-          <label style={{ margin: "0.5rem 0 0rem 0.7rem" }}>
-            Where would you like to go ?
-          </label>
+          <Stack sx={styledLabel}>Where would you like to go ?</Stack>
           <TextField
             // error
             id="outlined-error"
@@ -47,7 +54,16 @@ const Bespoke1stForm = ({ handleChange }: Props) => {
               margin: "1rem",
             }}
           >
-            <FormLabel id="demo-controlled-radio-buttons-group">
+            <FormLabel
+              id="demo-controlled-radio-buttons-group"
+              sx={{
+                fontSize: {
+                  xs: "14px",
+                  sm: "15px",
+                  md: "16px",
+                },
+              }}
+            >
               Would you require a visa to the destination?
             </FormLabel>
             <RadioGroup
@@ -62,9 +78,9 @@ const Bespoke1stForm = ({ handleChange }: Props) => {
           </FormControl>
         </Stack>
         <Stack sx={{ width: "100%", textAlign: "start" }}>
-          <label style={{ margin: "0.5rem 0 0rem 0.7rem" }}>
+          <Stack sx={styledLabel}>
             What city would you be travelling from?
-          </label>
+          </Stack>
           <TextField
             // error
             id="outlined-error"
@@ -73,9 +89,9 @@ const Bespoke1stForm = ({ handleChange }: Props) => {
           />
         </Stack>
         <Stack sx={{ width: "100%", textAlign: "start" }}>
-          <label style={{ margin: "0.5rem 0 0rem 0.7rem" }}>
+          <Stack sx={styledLabel}>
             How many days would you like to travel for?
-          </label>
+          </Stack>
           <TextField
             // error
             id="outlined-error"
@@ -93,7 +109,16 @@ const Bespoke1stForm = ({ handleChange }: Props) => {
               margin: "1rem",
             }}
           >
-            <FormLabel id="demo-controlled-radio-buttons-group">
+            <FormLabel
+              id="demo-controlled-radio-buttons-group"
+              sx={{
+                fontSize: {
+                  xs: "14px",
+                  sm: "15px",
+                  md: "16px",
+                },
+              }}
+            >
               Do you have your dates set?
             </FormLabel>
             <RadioGroup
@@ -109,7 +134,15 @@ const Bespoke1stForm = ({ handleChange }: Props) => {
         </Stack>
         <Stack>
           <Typography
-            sx={{ textAlign: "start", margin: "0.3rem 0 0rem 0.7rem" }}
+            sx={{
+              textAlign: "start",
+              margin: "0.3rem 0 0rem 0.7rem",
+              fontSize: {
+                xs: "14px",
+                sm: "15px",
+                md: "16px",
+              },
+            }}
           >
             If yes, enter the your below.
           </Typography>
@@ -129,7 +162,7 @@ const Bespoke1stForm = ({ handleChange }: Props) => {
             />
           </Stack>
           <Stack>
-            <label style={{ margin: "0.5rem 0 0rem 0.7rem" }}>To</label>
+            <Stack sx={styledLabel}>To</Stack>
           </Stack>
           <Stack sx={{ width: "30%", textAlign: "start" }}>
             <TextField
@@ -146,7 +179,16 @@ const Bespoke1stForm = ({ handleChange }: Props) => {
           spacing={2}
           sx={{ alignItems: "start", margin: "0.5rem 0" }}
         >
-          <Typography sx={{ margin: "0 0rem -1rem 0.6rem" }}>
+          <Typography
+            sx={{
+              margin: "0 0rem -1rem 0.6rem",
+              fontSize: {
+                xs: "14px",
+                sm: "15px",
+                md: "16px",
+              },
+            }}
+          >
             If not, do you have an idea of the month/year you’d like to travel
           </Typography>
           <Stack sx={{ width: "30%", textAlign: "start" }}>

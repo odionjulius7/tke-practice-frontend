@@ -238,15 +238,27 @@ function BespokeRegister() {
       >
         <LogoFile
           sx={{
-            margin: "2rem auto",
+            margin: {
+              xs: "1.8rem auto",
+              sm: "2rem auto",
+              md: "2rem auto",
+            },
             marginBottom: "3rem",
           }}
         />
         <Box
           sx={{
-            width: "60%",
+            width: {
+              xs: "90%",
+              sm: "60%",
+              md: "60%",
+            },
             backgroundColor: "#ffffff",
-            padding: "3.5rem",
+            padding: {
+              xs: "2rem",
+              sm: "3.5rem",
+              md: "3.5rem",
+            },
             borderRadius: "7px",
             minHeight: "400px",
             textAlign: "center",
@@ -287,7 +299,16 @@ function BespokeRegister() {
                   <Button
                     size="large"
                     sx={{
-                      width: "20%",
+                      width: {
+                        xs: "35%",
+                        sm: "20%",
+                        md: "20%",
+                      },
+                      height: {
+                        xs: "35px",
+                        sm: "40px",
+                        md: "40px",
+                      },
                       bgcolor: "#A78A48",
                       outlineOffset: "3px",
                       outline: "1px solid #A78A48",
@@ -307,7 +328,16 @@ function BespokeRegister() {
                   <Button
                     size="large"
                     sx={{
-                      width: "20%",
+                      width: {
+                        xs: "35%",
+                        sm: "20%",
+                        md: "20%",
+                      },
+                      height: {
+                        xs: "35px",
+                        sm: "40px",
+                        md: "40px",
+                      },
                       bgcolor: "#A78A48",
                       outlineOffset: "3px",
                       outline: "1px solid #A78A48",

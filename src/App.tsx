@@ -27,9 +27,13 @@ function App() {
         backgroundPosition: "contain",
         backgroundRepeat: "no-repeat",
         // overflow: "hidden",
-        minHeight: "690px",
+        minHeight: "720px",
         width: "100%",
-        padding: "2rem 0 1rem 0",
+        padding: {
+          xs: "1rem 0 0rem 0",
+          sm: "1rem 0 0rem 0",
+          md: "1rem 0 0rem 0",
+        },
       }}
     >
       <Routes>

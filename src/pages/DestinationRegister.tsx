@@ -225,13 +225,21 @@ function DestinationRegister() {
       >
         <LogoFile
           sx={{
-            margin: "2rem auto",
+            margin: {
+              xs: "1.8rem auto",
+              sm: "2rem auto",
+              md: "2rem auto",
+            },
             marginBottom: "3rem",
           }}
         />
         <Box
           sx={{
-            width: "60%",
+            width: {
+              xs: "80%",
+              sm: "70%",
+              md: "60%",
+            },
             backgroundColor: "#ffffff",
             padding: "3.5rem",
             borderRadius: "7px",
@@ -266,7 +274,19 @@ function DestinationRegister() {
                   color="inherit"
                   disabled={activeStep === 0}
                   onClick={handleBack}
-                  sx={{ mr: 1 }}
+                  sx={{
+                    mr: 1,
+                    width: {
+                      xs: "35%",
+                      sm: "20%",
+                      md: "20%",
+                    },
+                    height: {
+                      xs: "35px",
+                      sm: "40px",
+                      md: "40px",
+                    },
+                  }}
                 >
                   Back
                 </Button>
@@ -276,7 +296,16 @@ function DestinationRegister() {
                   <Button
                     size="large"
                     sx={{
-                      width: "20%",
+                      width: {
+                        xs: "35%",
+                        sm: "20%",
+                        md: "20%",
+                      },
+                      height: {
+                        xs: "35px",
+                        sm: "40px",
+                        md: "40px",
+                      },
                       bgcolor: "#A78A48",
                       outlineOffset: "3px",
                       outline: "1px solid #A78A48",
@@ -286,9 +315,6 @@ function DestinationRegister() {
                     }}
                     variant="contained"
                     onClick={handleFinish}
-                    // disabled={
-                    //   !travelData?.travelForWhat || !travelData?.bookingTime
-                    // }
                   >
                     {loading ? "loading..." : "Submit"}
                   </Button>
@@ -296,12 +322,21 @@ function DestinationRegister() {
                   <Button
                     size="large"
                     sx={{
-                      width: "20%",
+                      width: {
+                        xs: "35%",
+                        sm: "20%",
+                        md: "20%",
+                      },
                       bgcolor: "#A78A48",
                       outlineOffset: "3px",
                       outline: "1px solid #A78A48",
                       "&:hover": {
                         bgcolor: "#B78B49",
+                      },
+                      height: {
+                        xs: "35px",
+                        sm: "40px",
+                        md: "40px",
                       },
                     }}
                     variant="contained"
@@ -314,7 +349,6 @@ function DestinationRegister() {
                   >
                     Next
                   </Button>
-                  // <Button onClick={handleNext}>Next</Button>
                 )}
               </Box>
             </React.Fragment>

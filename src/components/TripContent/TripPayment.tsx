@@ -43,11 +43,26 @@ const TripPayment = (props: Props) => {
                   sx={{
                     justifyContent: "center",
                     alignItems: "center",
-                    fontSize: "15px",
+                    fontSize: {
+                      xs: "12px",
+                      sm: "15px",
+                      md: "15px",
+                    },
                     fontWeight: 600,
                   }}
                 >
-                  <Typography>{item?.title}</Typography>
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: "11px",
+                        sm: "15px",
+                        md: "15px",
+                      },
+                      fontWeight: 600,
+                    }}
+                  >
+                    {item?.title}
+                  </Typography>
                 </Stack>
                 <Stack
                   direction="column"
@@ -64,7 +79,11 @@ const TripPayment = (props: Props) => {
                     sx={{
                       color:
                         item?.status === "Not Paid" ? "#E73B15" : "#1F7003",
-                      fontSize: "12px",
+                      fontSize: {
+                        xs: "10px",
+                        sm: "12px",
+                        md: "12px",
+                      },
                     }}
                   >
                     {item?.status}
@@ -72,7 +91,11 @@ const TripPayment = (props: Props) => {
                 </Stack>
                 <Stack
                   sx={{
-                    fontSize: "14px",
+                    fontSize: {
+                      xs: "10px",
+                      sm: "14px",
+                      md: "14px",
+                    },
                     fontWeight: 700,
                   }}
                 >
@@ -95,14 +118,22 @@ const TripPayment = (props: Props) => {
                       color: "#fff",
                       margin: "0.3rem 0",
                       padding: "0.1rem 0.2rem",
-                      fontSize: "14px",
+                      fontSize: {
+                        xs: "10px",
+                        sm: "14px",
+                        md: "14px",
+                      },
                       fontWeight: 400,
                       justifyContent: "center",
                       alignItems: "center",
                     }}
                   >
                     <Link
-                      style={{ textDecoration: "none", color: "inherit" }}
+                      style={{
+                        textDecoration: "none",
+                        color: "inherit",
+                        fontSize: "inherit",
+                      }}
                       to={`${
                         item?.payment_link.startsWith("https://") ||
                         item?.payment_link.startsWith("http://")
@@ -118,7 +149,11 @@ const TripPayment = (props: Props) => {
                   <Stack
                     sx={{
                       color: "#AF9250",
-                      fontSize: "12px",
+                      fontSize: {
+                        xs: "10px",
+                        sm: "12px",
+                        md: "12px",
+                      },
                       fontWeight: 500,
                       bgcolor: "#fff",
                       padding: "0.1rem 0.2rem",
@@ -126,7 +161,11 @@ const TripPayment = (props: Props) => {
                   >
                     {" "}
                     <Link
-                      style={{ textDecoration: "none", color: "inherit" }}
+                      style={{
+                        textDecoration: "none",
+                        color: "inherit",
+                        fontSize: "inherit",
+                      }}
                       to={`${
                         item?.invoice_link.startsWith("https://") ||
                         item?.invoice_link.startsWith("http://")

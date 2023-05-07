@@ -77,7 +77,14 @@ const UserForm = (props: Props) => {
       autoComplete="off"
     >
       <Stack>
-        <Stack direction="row" spacing={2}>
+        <Stack
+          direction={{
+            xs: "column",
+            sm: "row",
+            md: "row",
+          }}
+          spacing={2}
+        >
           <Stack sx={{ width: "100%", textAlign: "start" }}>
             <label style={{ margin: "0.5rem 0 0rem 0.7rem" }}>First Name</label>
             <TextField
@@ -107,12 +114,35 @@ const UserForm = (props: Props) => {
           />
         </Stack>
         <Stack
-          direction="row"
+          direction={{
+            xs: "column",
+            sm: "row",
+            md: "row",
+          }}
           spacing={2}
           sx={{ width: "100%", alignItems: "center", justifyContent: "center" }}
         >
-          <Stack sx={{ width: "20%", textAlign: "start" }}>
-            <label style={{ margin: "0rem 0 0.5rem 0.7rem" }}>Post Code</label>
+          <Stack
+            sx={{
+              width: {
+                xs: "90%",
+                sm: "25%",
+                md: "20%",
+              },
+              textAlign: "start",
+            }}
+          >
+            <Stack
+              sx={{
+                margin: {
+                  xs: "1rem 0 0.5rem 0.7rem",
+                  sm: "0rem 0 0.5rem 0.7rem",
+                  md: "0rem 0 0.5rem 0.7rem",
+                },
+              }}
+            >
+              Post Code
+            </Stack>
             <Select
               // error
               name="postCode"
@@ -134,7 +164,16 @@ const UserForm = (props: Props) => {
 
             {/* <FormHelperText>Without label</FormHelperText> */}
           </Stack>
-          <Stack sx={{ width: "76%", textAlign: "start" }}>
+          <Stack
+            sx={{
+              width: {
+                xs: "100%",
+                sm: "70%",
+                md: "76%",
+              },
+              textAlign: "start",
+            }}
+          >
             <label style={{ margin: "0.5rem 0 0rem 0.7rem" }}>Phone Num:</label>
             <TextField
               // error
@@ -145,7 +184,11 @@ const UserForm = (props: Props) => {
           </Stack>
         </Stack>
         <Stack
-          direction="row"
+          direction={{
+            xs: "column",
+            sm: "row",
+            md: "row",
+          }}
           spacing={2}
           sx={{
             width: "100%",
@@ -154,8 +197,28 @@ const UserForm = (props: Props) => {
             padding: "0 0.2rem",
           }}
         >
-          <Stack sx={{ width: "48%", textAlign: "start" }}>
-            <label style={{ margin: "0rem 0 0.5rem 0.7rem" }}> Gender</label>
+          <Stack
+            sx={{
+              width: {
+                xs: "90%",
+                sm: "48%",
+                md: "48%",
+              },
+              textAlign: "start",
+            }}
+          >
+            <Stack
+              sx={{
+                margin: {
+                  xs: "1rem 0 0.5rem 0.7rem",
+                  sm: "0rem 0 0.5rem 0.7rem",
+                  md: "0rem 0 0.5rem 0.7rem",
+                },
+              }}
+            >
+              {" "}
+              Gender
+            </Stack>
             <Select
               // error
               name="gender"
@@ -172,7 +235,16 @@ const UserForm = (props: Props) => {
             </Select>
             {/* <FormHelperText>Without label</FormHelperText> */}
           </Stack>
-          <Stack sx={{ width: "48%", textAlign: "start" }}>
+          <Stack
+            sx={{
+              width: {
+                xs: "100%",
+                sm: "48%",
+                md: "48%",
+              },
+              textAlign: "start",
+            }}
+          >
             <label style={{ margin: "0.5rem 0 0rem 0.7rem" }}>D.O.B</label>
             <TextField
               // error
@@ -182,8 +254,27 @@ const UserForm = (props: Props) => {
             />
           </Stack>
         </Stack>
-        <Stack sx={{ width: "100%", textAlign: "start" }}>
-          <label style={{ margin: "0.3rem 0 0.2rem 0.7rem" }}>Trip Type</label>
+        <Stack
+          sx={{
+            width: {
+              xs: "100%",
+              sm: "100%",
+              md: "100%",
+            },
+            textAlign: "start",
+          }}
+        >
+          <Stack
+            sx={{
+              margin: {
+                xs: "1rem 0 0.2rem 1rem",
+                sm: "0.3rem 0 0.2rem 0.7rem",
+                md: "0.3rem 0 0.2rem 0.7rem",
+              },
+            }}
+          >
+            Trip Type
+          </Stack>
           {/* <TextField error id="outlined-error" /> */}
           <Select
             // error
@@ -191,7 +282,18 @@ const UserForm = (props: Props) => {
             onChange={handleSelectChange}
             displayEmpty
             inputProps={{ "aria-label": "Without label" }}
-            sx={{ width: "100%" }}
+            sx={{
+              width: {
+                xs: "90%",
+                sm: "100%",
+                md: "100%",
+              },
+              marginLeft: {
+                xs: "1rem",
+                sm: "0rem",
+                md: "0rem",
+              },
+            }}
             name="tripType"
           >
             <MenuItem value="">
@@ -205,17 +307,34 @@ const UserForm = (props: Props) => {
 
       <Stack
         direction="row"
-        sx={{ margin: "4rem 0 0rem 0", width: "100%", justifyContent: "end" }}
+        sx={{
+          margin: {
+            xs: "3rem 0 0rem 0",
+            sm: "4rem 0 0rem 0",
+            md: "4rem 0 0rem 0",
+          },
+          width: "100%",
+          justifyContent: "end",
+        }}
       >
         <Button
           size="large"
           sx={{
-            width: "20%",
+            width: {
+              xs: "40%",
+              sm: "25%",
+              md: "20%",
+            },
             bgcolor: "#A78A48",
             outlineOffset: "3px",
             outline: "1px solid #A78A48",
             "&:hover": {
               bgcolor: "#B78B49",
+            },
+            height: {
+              xs: "35px",
+              sm: "40px",
+              md: "40px",
             },
           }}
           variant="contained"
