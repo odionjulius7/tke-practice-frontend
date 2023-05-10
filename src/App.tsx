@@ -9,6 +9,7 @@ import {
   TravelRegister,
   TripDetails,
   FinishPage,
+  ForgotPassword,
 } from "./pages";
 
 import "./App.css";
@@ -17,6 +18,7 @@ import ProtectedRoute from "./ProtectedRoute";
 import NOTFOUND from "./pages/NOTFOUND";
 import { Stack } from "@mui/system";
 import TkeBg from "./Images/tkeBG.jpg";
+import ResetPassword from "./pages/ResetPassword";
 
 function App() {
   return (
@@ -50,6 +52,8 @@ function App() {
         <Route path="/travel" element={<TravelRegister />} />
         <Route path="/bespoke" element={<BespokeRegister />} />
         <Route path="/destination" element={<DestinationRegister />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/finish" element={<FinishPage />} />
         <Route path="/*" element={<NOTFOUND />} />
       </Routes>

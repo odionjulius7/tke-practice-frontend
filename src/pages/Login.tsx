@@ -11,7 +11,7 @@ import {
 import React, { useEffect, useState } from "react";
 import CompWrapper from "../components/CompWrapper";
 import { useAppDispatch, useAppSelector } from "../Features/storeHook";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { LoginUser } from "../models/LoginUser.interface";
 import { login, reset } from "../Features/auth/authSlice";
 
@@ -174,7 +174,7 @@ const Login = (props: Props) => {
                 },
               }}
             >
-              Forgot Password
+              <Link to="/forgot-password">Forgot Password</Link>
             </Typography>
           </Stack>
           <Button

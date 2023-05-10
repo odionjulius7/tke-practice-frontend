@@ -25,6 +25,7 @@ export const login = createAsyncThunk(
   }
 );
 
+// Change Password
 export const changePassword = createAsyncThunk(
   "auth/changePassword",
   async (
@@ -55,7 +56,68 @@ export const changePassword = createAsyncThunk(
       toast.success("Password Changed successful");
       return response.data;
     } catch (error: any) {
-      toast.error("Password Change Unsuccessful, check you password");
+      toast.error("Password Change Unsuccessful, check your password");
+      console.log(error.response.data);
+      // If there is an error, we can use the `thunkAPI.rejectWithValue` function to return the error message
+      return thunkAPI.rejectWithValue(error.response.data.message);
+    }
+  }
+);
+// Forgot Password
+export const forgotPasswrod = createAsyncThunk(
+  "auth/forgotPasswrod",
+  async (email: string, thunkAPI) => {
+    try {
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_ENDPOINT}/auth/send/token`,
+        {
+          email,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      toast.success("The reset token has been sent to your email");
+      return response.data;
+    } catch (error: any) {
+      toast.error("mail not sent, check your email");
+      console.log(error.response.data);
+      // If there is an error, we can use the `thunkAPI.rejectWithValue` function to return the error message
+      return thunkAPI.rejectWithValue(error.response.data.message);
+    }
+  }
+);
+// reset Password
+export const resetPassword = createAsyncThunk(
+  "auth/resetPassword",
+  async (
+    ids: {
+      token: string;
+      newPassword: string;
+    },
+    thunkAPI
+  ) => {
+    try {
+      const response = await axios.post(
+        `${process.env.REACT_APP_API_ENDPOINT}/auth/reset/password`,
+        {
+          newPassword: ids.newPassword,
+          token: ids.token,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      toast.success("Password Reset successful");
+      return response.data;
+    } catch (error: any) {
+      toast.error("Password reset Unsuccessful, check your token");
       console.log(error.response.data);
       // If there is an error, we can use the `thunkAPI.rejectWithValue` function to return the error message
       return thunkAPI.rejectWithValue(error.response.data.message);
@@ -127,16 +189,46 @@ const authSlice = createSlice({
         state.isSuccess = false;
         state.isError = false;
         // state.errorMessage = null;
+      })
+      .addCase(changePassword.fulfilled, (state) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+      })
+      .addCase(changePassword.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        // state.errorMessage = action.payload as string;
+      })
+      // forgot Password
+      .addCase(forgotPasswrod.pending, (state) => {
+        state.isLoading = true;
+        state.isSuccess = false;
+        state.isError = false;
+      })
+      .addCase(forgotPasswrod.fulfilled, (state) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+      })
+      .addCase(forgotPasswrod.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = false;
+        state.isError = true;
+      })
+      // forgot Password
+      .addCase(resetPassword.pending, (state) => {
+        state.isLoading = true;
+        state.isSuccess = false;
+        state.isError = false;
+      })
+      .addCase(resetPassword.fulfilled, (state) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+      })
+      .addCase(resetPassword.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = false;
+        state.isError = true;
       });
-    builder.addCase(changePassword.fulfilled, (state) => {
-      state.isLoading = false;
-      state.isSuccess = true;
-    });
-    builder.addCase(changePassword.rejected, (state, action) => {
-      state.isLoading = false;
-      state.isError = true;
-      // state.errorMessage = action.payload as string;
-    });
   },
 });
 

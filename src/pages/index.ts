@@ -6,7 +6,7 @@ import Login from "./Login";
 import TravelRegister from "./TravelRegister";
 import TripDetails from "./TripDetails";
 import FinishPage from "./FinishPage";
-
+import ForgotPassword from "./ForgotPassword";
 export {
   FinishPage,
   Home,
@@ -16,4 +16,5 @@ export {
   Login,
   TravelRegister,
   TripDetails,
+  ForgotPassword,
 };

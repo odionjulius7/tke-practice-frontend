@@ -218,9 +218,10 @@ function BespokeRegister() {
       };
 
       await dispatch(createTripRequest({ tripRequest, token }));
-      if (successRequest) {
-        navigate("/finish");
+      if (!successRequest) {
+        return;
       }
+      navigate("/finish");
     } catch (error) {
       console.log(error);
     }
